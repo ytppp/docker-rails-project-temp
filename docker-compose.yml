@@ -1,0 +1,22 @@
+version: "3.4"
+
+services:
+  web:
+    build: .
+    command: bin/rails server -b 0.0.0.0
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432
+      REDIS_URL: redis://redis:6379/0
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: postgres
+  redis:
+    image: redis:7
