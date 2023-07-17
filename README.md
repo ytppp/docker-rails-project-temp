@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails project template lets me start new projects quickly.
 
-Things you may want to cover:
+## Feature
 
-* Ruby version
+- Docker
+- dotenv
+- PosgreSQL
+- Redis
+- Github Actions(todo)
+- Brakeman(todo)
+- All other Rails default stack
 
-* System dependencies
+## Prepare
 
-* Configuration
+- Install Docker https://www.docker.com/products/docker-desktop/
 
-* Database creation
+## Usage
 
-* Database initialization
+Clone this repo:
 
-* How to run the test suite
+```
+$ git clone https://github.com/ytppp/rail-demo.git myapp
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Build and install dependency:
 
-* Deployment instructions
+```
+$ docker compose run --rm web bin/setup
+```
 
-* ...
+Start dev server:
+
+```
+$ docker compose up
+```
+
+Open console(open another terminal):
+
+```
+$ docker compose run --rm web bash
+```
