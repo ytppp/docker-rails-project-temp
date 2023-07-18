@@ -8,8 +8,8 @@ A Rails project template lets me start new projects quickly.
 - dotenv
 - PosgreSQL
 - Redis
-- Github Actions(todo)
-- Brakeman(todo)
+- Github Actions
+- Brakeman
 - All other Rails default stack
 
 ## Prepare
