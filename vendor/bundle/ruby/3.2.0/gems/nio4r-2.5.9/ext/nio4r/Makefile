@@ -15,7 +15,7 @@ NULLCMD = :
 srcdir = .
 topdir = /usr/local/include/ruby-3.2.0
 hdrdir = $(topdir)
-arch_hdrdir = /usr/local/include/ruby-3.2.0/aarch64-linux
+arch_hdrdir = /usr/local/include/ruby-3.2.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/usr/local
@@ -106,7 +106,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = aarch64-linux
+arch = x86_64-linux
 sitearch = $(arch)
 ruby_version = 3.2.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)

@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module RailsDemo
+module App
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
@@ -18,5 +18,15 @@ module RailsDemo
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Use redis cache by default
+    config.cache_store = :redis_cache_store, {
+      url: ENV.fetch("REDIS_URL", "redis://redis:6379/0"),
+      pool_size: ENV.fetch("RAILS_MAX_THREADS", 5)
+    }
+
+    config.generators do |generate|
+      generate.helper false
+    end
   end
 end
