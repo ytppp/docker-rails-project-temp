@@ -21,7 +21,7 @@ A Rails project template lets me start new projects quickly.
 Clone this repo:
 
 ```
-$ git clone https://github.com/ytppp/rail-demo.git myapp
+$ git clone git@github.com:ytppp/rail-demo.git myapp
 ```
 
 Build and install dependency:
