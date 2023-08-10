@@ -4,8 +4,8 @@ A Rails project template lets me start new projects quickly.
 
 ## Feature
 
--[x] Docker
--[] dotenv
+- [x] Docker
+- [] dotenv
 - PosgreSQL
 - Redis
 - Github Actions
